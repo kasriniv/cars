@@ -1,0 +1,36 @@
+---
+openapi: 3.0.0
+info:
+  title: cars
+  description: newcars
+  version: 1.0.0
+paths:
+  /cars:
+    get:
+      summary: getcars
+      description: getcars
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/car'
+              examples:
+                cargetexample:
+                  value:
+                    name: firstcar
+                    type: tesla
+                    year: 2018
+components:
+  schemas:
+    car:
+      title: Root Type for car
+      description: The root of the car type's schema.
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        year:
+          type: string
