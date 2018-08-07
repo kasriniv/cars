@@ -17,10 +17,8 @@ paths:
                 $ref: '#/components/schemas/car'
               examples:
                 cargetexample:
-                  value:
-                    name: firstcar
-                    type: tesla
-                    year: 2018
+                  value:'{"name": "307", "model": "Peugeot 307", "year": 2003}'
+                
 components:
   schemas:
     car:
